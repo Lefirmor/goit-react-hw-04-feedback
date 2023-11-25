@@ -28,12 +28,12 @@ const ContactForm = ({ onHandleSubmit }) => {
       number,
     };
 
-    clearData();
+    clearForm();
 
     onHandleSubmit(userContacts);
   };
 
-  const clearData = () => {
+  const clearForm = () => {
     setName('');
     setNumber('');
   };
