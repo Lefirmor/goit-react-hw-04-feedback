@@ -9,15 +9,12 @@ const ContactForm = ({ onHandleSubmit }) => {
   const [number, setNumber] = useState('');
 
   const inputChange = ({ target: { name, value } }) => {
-    switch (name) {
-      case 'userName':
-        setName(value);
-        break;
-      case 'number':
-        setNumber(value);
-        break;
-      default:
-        throw new Error('Something went wrong, try again');
+    if (name === 'userName') {
+      setName(value);
+    } else if (name === 'number') {
+      setNumber(value);
+    } else {
+      throw new Error('Something is wrong');
     }
   };
 
